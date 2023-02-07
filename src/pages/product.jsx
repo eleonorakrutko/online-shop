@@ -3,7 +3,10 @@ import React from "react";
 export const Product = () => {
     return(
         <div>
-            <h1>Good works</h1>
+            <button>go back</button>
+            <p>товар</p>
+            <p>описание</p>
+            <p>цена</p>
         </div>
     )
 }
