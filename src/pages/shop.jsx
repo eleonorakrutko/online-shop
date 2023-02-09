@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Preloader } from "../components/preloader";
 import { ProductList } from "../components/productArea/productList";
-import { SearchArea } from "../components/searchArea/searchArea";
+import { ShopMainFilter } from "../components/shopMainFilter";
 import { fetchProducts } from "../utilts/fetchProducts";
 
 
@@ -17,7 +17,7 @@ export const Shop = () => {
     
     return(
         <div>
-            <SearchArea/>
+            <ShopMainFilter/>
             {products ?
                 <ProductList products={products}/>
                 : <Preloader/>

@@ -3,7 +3,14 @@ import React from "react";
 export const Login = () => {
     return(
         <div>
-            <h1>Login works</h1>
+            <h2>Login</h2>
+            <div>
+                <input type="text" />
+            </div>
+            <div>
+                <input type="text"/>
+            </div>
+            <button>Login</button>
         </div>
     )
 }

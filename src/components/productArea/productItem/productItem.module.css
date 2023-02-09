@@ -5,6 +5,10 @@
     flex-basis: 200px;
     padding: 10px;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .title {
@@ -41,28 +45,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-
-.addToCartButton {
-    border-radius: 5px;
-    padding: 6px;
-    max-width: 30px;
-    cursor: pointer;
-    background: none;
-    border: 1px solid rgba(0,0,0,0.2);
-    outline: none;
-    transition: all 0.1s ease-in-out;    
-}
-
-.addToCartButton > img {
-    width: 100%;
-}
-
-.addToCartButton:hover {
-    border: 1px solid gray;
-}
-
-.addToCartButton:active {
-    box-shadow: inset 2px 2px 1px rgba(0,0,0,0.2);    
+    margin: auto;
 }

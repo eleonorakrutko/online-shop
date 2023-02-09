@@ -1,12 +1,16 @@
 import React from "react";
+import { AddToCartButton } from "../components/addToCartButton";
+import { useParams } from "react-router";
 
 export const Product = () => {
-    return(
+    const {productId} = useParams()
+    
+    return (
         <div>
-            <button>go back</button>
-            <p>товар</p>
-            <p>описание</p>
-            <p>цена</p>
+            <h2>Tovar {productId}</h2>
+            <div>Price</div>
+            <div>Description</div>
+            <AddToCartButton size="m"/>
         </div>
     )
 }

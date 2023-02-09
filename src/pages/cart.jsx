@@ -1,9 +1,13 @@
 import React from "react";
 
 export const Cart = () => {
-    return(
+    return (
         <div>
-            <h1>Cart works</h1>
+            <h2>Cart works</h2>
+            <ul>
+                <li>Cart Item</li>
+            </ul>
+            <button>Purchase</button>
         </div>
     )
 }
