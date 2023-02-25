@@ -12,6 +12,7 @@ import { MainMenu } from './components/mainHeader';
 
 import { Provider } from 'react-redux';
 import { store } from './redux';
+import { PrivateRoute } from './components/privateRoute';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,7 +24,9 @@ root.render(
         <Route path='/' element={<MainMenu/>}>
           <Route path='/' element={<Shop/>}/>
           <Route path='contacts' element={<Contacts/>}/>
-          <Route path='cart' element={<Cart/>}/>  
+          <Route element={<PrivateRoute/>}>
+            <Route path='cart' element={<Cart/>}/>
+          </Route>
           <Route path='product/:productId' element={<Product/>}/>
           <Route path='product' element={<Navigate to='/'/>}/>
         </Route>
