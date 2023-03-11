@@ -1,27 +1,26 @@
-import {createSlice, createSelector} from "@reduxjs/toolkit"
+import {createSlice, createSelector} from '@reduxjs/toolkit';
+
 
 const startState = {
     city: 'Gomel',
-    phone: '+375441234567',
+    phone: '+375 44 1234567',
     street: 'Sovetskaya 20'
-}
+};
 
-export const contactsSlice =  createSlice({
+export const contactsSlice = createSlice({
     name: 'contacts',
     initialState: startState,
     reducers: {
-        changeCity: (state, {payload}) => {
+       changeCity: (state, {payload}) => {
             state.city = payload;
-        }
+       }
     }
 });
 
-//если со стора прилетает новый обьект, то компоненты от него зависящие делают ререндер, в другом случае нет
-// store -> components -> action -> reducer -> store
 
-export const contactsReducer =  contactsSlice.reducer;
+export const contactsReducer = contactsSlice.reducer;
+
 export const {changeCity} = contactsSlice.actions;
-
 
 export const selectContacts = ({contacts}) => contacts;
 
@@ -35,4 +34,3 @@ export const selectPhone = createSelector(
     ({phone}) => phone
 );
 
-// f(t(p())) - функциональная композиция

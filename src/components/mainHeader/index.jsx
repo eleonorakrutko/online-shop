@@ -30,8 +30,8 @@ export const MainMenu = () => {
         <>
              <nav className={styles.wrapper}>
                 <p className={styles.userName}>{isAuth ? userName : 'please log in'}</p>
-             {/* <NavLink to='/login' className={activeClassName} onClick={changeUserAuth}>Login</NavLink> */}
-                <button className={styles.route} onClick={changeUserAuth}>{isAuth ? 'Logout' : 'Login'}</button>
+                <NavLink to='/login' className={activeClassName} onClick={changeUserAuth}>Login</NavLink>
+                {/* <button className={styles.route} onClick={changeUserAuth}>{isAuth ? 'Logout' : 'Login'}</button> */}
                 <NavLink to='/contacts' className={activeClassName}>Contacts</NavLink>
                 <NavLink to='/' className={activeClassName}>Shop</NavLink>
                 <AddToCartButton handleClick={navigateToCart} size="s"/>

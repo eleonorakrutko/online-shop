@@ -1,12 +1,13 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { Navigate, Outlet } from "react-router-dom";
-import { selectAuth } from "../../redux/slices/userAuth";
+import React from 'react';
+import {Navigate, Outlet} from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectIsAuth } from '../../redux/slices/userAuth';
 
-export const PrivateRoute = ({children}) => {
-    const isAuth = useSelector(selectAuth);
 
-    if (!isAuth.isAuth) {
+export const PrivateRoute = () => {
+    const isAuth = useSelector(selectIsAuth);
+
+    if (!isAuth) {
         return <Navigate to='/'/>
     }
 
